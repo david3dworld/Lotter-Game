@@ -1,0 +1,1 @@
+- [Cannot Initialize Github Actions on Organization Account #3143](https://github.com/firebase/firebase-tools/issues/3143)

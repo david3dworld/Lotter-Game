@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 100;
+  src: url('../fonts/urbane_rounded_thin.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 200;
+  src: url('../fonts/urbane_rounded_extra_light.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 300;
+  src: url('../fonts/urbane_rounded_light.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 400;
+  src: url('../fonts/urbane_rounded_medium.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 600;
+  src: url('../fonts/urbane_rounded_demi_bold.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 700;
+  src: url('../fonts/urbane_rounded_bold.otf');
+}
+
+@font-face {
+  font-family: 'Urbane Rounded';
+  font-weight: 900;
+  src: url('../fonts/urbane_rounded_heavy.otf');
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// Toast
+.v-toast__item {
+  font-family: Urbane Rounded;
+
+  .v-toast__text {
+    padding: 0 1rem;
+  }
+}

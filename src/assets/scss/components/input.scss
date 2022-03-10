@@ -1,0 +1,33 @@
+.form-input {
+  font-family: Urbane Rounded;
+  font-style: normal;
+  padding: 8px;
+
+  label {
+    padding-left: 16px;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  input {
+    width: 346px;
+    outline: none;
+    height: 48px;
+    font-weight: bold;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    border: none;
+    font-size: 24px;
+    padding: 8px 18px;
+    text-align: center;
+  }
+
+  input:disabled {
+    background: rgba(180, 180, 180, 0.5);
+    box-shadow: 1px 1px 23px rgba(0, 0, 0, 0.05);
+  }
+}

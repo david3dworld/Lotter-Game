@@ -1,0 +1,199 @@
+#community {
+  height: 1045px;
+  position: relative;
+  background-color: $light_green;
+
+  .img-background {
+    position: relative;
+    z-index: 999;
+    img {
+      position: absolute;
+      top: -85px;
+    }
+  }
+
+  .container {
+    @extend %container;
+    padding-bottom: 65px;
+    @include resp($lg) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    @include resp($xl) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .text-area {
+    @include resp($lg) {
+      width: 55%;
+    }
+    @include resp($xl) {
+      width: 65%;
+    }
+    .title {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 57.5px;
+      line-height: 115%;
+      letter-spacing: -3px;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #000000;
+      margin-bottom: 70px;
+      @include resp(490px) {
+        font-size: 64px;
+        margin-bottom: 80px;
+      }
+      @include resp($xl) {
+        font-size: 72px;
+        line-height: 102%;
+      }
+    }
+    .para {
+      margin-bottom: 30px;
+      @include resp($xl) {
+        margin-bottom: 40px;
+      }
+      &:nth-child(4) {
+        .detail {
+          width: 85%;
+          @include resp($lg) {
+            width: 100%;
+          }
+          @include resp($xxl) {
+            width: 80%;
+          }
+        }
+      }
+      &:nth-child(5) {
+        width: 90%;
+        @include resp(490px) {
+          width: 85%;
+          @include resp($lg) {
+            width: 100%;
+          }
+        }
+      }
+      .subtitle {
+        font-family: Urbane Rounded;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 133%;
+        letter-spacing: -0.03em;
+        @include resp(490px) {
+          font-size: 24px;
+        }
+        @include resp($lg) {
+          font-size: 36px;
+          line-height: 89%;
+          font-weight: 400;
+          letter-spacing: -0.03em;
+          margin-bottom: 15px;
+        }
+        .icon {
+          @include resp($lg) {
+            display: none;
+          }
+        }
+      }
+      .detail {
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 136%;
+        text-align: left;
+        font-size: 18px;
+        @include resp(490px) {
+          font-size: 18px;
+        }
+        @include resp($lg) {
+          font-size: 18px;
+          line-height: 178%;
+        }
+        @include resp($xxl) {
+          width: 88%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      // large screen
+      .subtitle,
+      .detail {
+        @include resp($lg) {
+          text-align: center !important;
+        }
+      }
+    }
+    .action {
+      margin-top: 60px;
+      @include resp($xl) {
+        margin-top: 75px;
+      }
+    }
+  }
+
+  // images
+  .right-top {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 73px;
+    text-align: right;
+    @include resp(490px) {
+      width: 85px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  // right side bottom
+  .right-side-center {
+    position: absolute;
+    right: 0px;
+    top: 320px;
+    width: 60px;
+    text-align: right;
+    @include resp(490px) {
+      top: 375px;
+      width: 65px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  // right side bottom
+  .right-side-bottom {
+    position: absolute;
+    right: 0px;
+    top: 620px;
+    width: 95px;
+    text-align: right;
+    @include resp(490px) {
+      top: 675px;
+      width: 110px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  // left side large image
+  .lg-img-background {
+    @include resp($lg) {
+      position: absolute;
+      top: -50px;
+      width: 890px;
+      left: 0px;
+    }
+    @include resp($xl) {
+      width: 830px;
+    }
+    img {
+      width: 100%;
+      top: initial;
+      position: initial;
+    }
+  }
+}

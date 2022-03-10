@@ -1,0 +1,168 @@
+#hero {
+  height: 809px;
+  font-family: Urbane Rounded;
+  background-size: cover;
+  // small screen update
+  @include maxResp($lg) {
+    height: initial;
+    margin-bottom: -60px;
+  }
+  @include resp($xs) {
+    background: url('../imgs/illustrations/hero/bg_mobile.png') repeat center
+      center;
+    background-size: cover;
+  }
+  @include resp($lg) {
+    background: url('../imgs/illustrations/hero/background.png') repeat center
+      center;
+    background-size: cover;
+  }
+  @include minmax($xl, $xxl) {
+    height: 875px;
+  }
+  .container {
+    @include resp($md) {
+      padding-top: 100px;
+    }
+    @include resp($xs) {
+      padding-top: 118px;
+    }
+    @include resp($xl) {
+      padding: 245px 47px 0;
+    }
+    @include resp($xxl) {
+      padding-right: 40px !important;
+      padding-left: 25px !important;
+    }
+  }
+
+  .text-area {
+    .highlight-texts {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+
+      @include resp($xs) {
+        text-align: center;
+        font-size: 64px;
+        line-height: 70px;
+      }
+      @include resp($md) {
+        font-size: 72px;
+        letter-spacing: -3px;
+        line-height: 76px;
+      }
+      @include resp($xxl) {
+        text-align: left;
+      }
+    }
+
+    // description
+    .description {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+      color: #ffffff;
+      @include resp($xs) {
+        padding: 0 16px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 23px;
+      }
+      @include resp($md) {
+        font-size: 24px;
+        line-height: 39px;
+      }
+      @include resp($xxl) {
+        width: 755px;
+        padding-top: 12px;
+      }
+    }
+    // batch sm heading
+    .batch-sm {
+      margin-top: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      @include resp($xs) {
+        margin-top: 24px;
+      }
+      @include resp($lg) {
+        @include fontSize($lg, $xl, 18px, 19px);
+        margin-top: 10px;
+      }
+      @include resp($xl) {
+        font-size: 22px;
+        margin-top: 15px;
+      }
+      @include resp($xxl) {
+        font-size: 24px;
+        margin-top: 17px;
+      }
+    }
+  }
+
+  .img-area {
+    position: relative;
+    z-index: 500;
+    @include resp($xs) {
+      text-align: center;
+    }
+
+    img {
+      border-radius: 16px;
+
+      @include resp($sm) {
+        width: 400px;
+      }
+      @include resp($lg) {
+        width: 417px !important;
+      }
+      @include resp($xxl) {
+        width: 431px !important;
+      }
+      @include resp($xs) {
+        width: 380px;
+      }
+    }
+  }
+
+  .btn-group {
+    @include resp($xs) {
+      padding-top: 32px;
+      display: block;
+      text-align: center;
+      :nth-child(1) {
+        // margin-bottom: 16px;
+        @include resp($xxl) {
+          margin-bottom: 0px;
+        }
+      }
+      :nth-child(2) {
+        margin-bottom: 32px;
+        @include resp($xxl) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    @include resp($md) {
+      padding-top: 65px;
+      display: flex;
+      justify-content: center;
+      :nth-child(1) {
+        margin-right: 36px;
+        @include resp($lg) {
+          margin-right: 0px;
+        }
+        @include resp($xxl) {
+          margin-right: 23px;
+        }
+      }
+    }
+    @include resp($xxl) {
+      padding-top: 55px;
+    }
+  }
+}

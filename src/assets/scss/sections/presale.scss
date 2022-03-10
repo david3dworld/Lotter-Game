@@ -1,0 +1,296 @@
+#presale {
+  background-color: #a981e2;
+  height: 100vh;
+
+  @include resp(390px) {
+    width: 100vw;
+  }
+  @include resp($lg) {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+    z-index: 100;
+
+    .logo {
+      width: 100%;
+      height: 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 64px;
+      letter-spacing: -0.5px;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      color: #ffffff;
+    }
+
+    .title {
+      width: 50%;
+      font-family: Urbane Rounded;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+
+      @include resp(390px) {
+        width: 100%;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -3px;
+        text-align: center;
+      }
+
+      @include resp($lg) {
+        width: 60%;
+        margin-top: 24px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -3px;
+        text-align: left;
+      }
+
+      @include resp($xl) {
+        width: 60%;
+        margin-top: 45px;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 68px;
+        letter-spacing: -3px;
+        text-align: left;
+      }
+
+      @include resp($xxl) {
+        width: 60%;
+        margin-top: 55px;
+        font-weight: 600;
+        font-size: 68px;
+        line-height: 72px;
+        letter-spacing: -3px;
+        text-align: left;
+      }
+    }
+    .description {
+      color: #ffffff;
+
+      @include resp(390px) {
+        width: 100%;
+        margin-top: 18px;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      @include resp($lg) {
+        width: 50%;
+        margin-top: 24px;
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: left;
+      }
+
+      @include resp($xl) {
+        width: 55%;
+        margin-top: 30px;
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: left;
+      }
+
+      @include resp($xxl) {
+        width: 55%;
+        margin-top: 35px;
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: left;
+      }
+    }
+
+    .action-group {
+      @include resp(390px) {
+        padding-top: 30px;
+        text-align: center;
+      }
+      @include resp($md) {
+        padding-top: 25px;
+        text-align: center;
+      }
+      @include resp($lg) {
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .actions {
+        @include resp(390px) {
+          text-align: center;
+          label {
+            margin-top: 4px;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 32px;
+            color: #ffffff;
+            display: block;
+          }
+          .item {
+            margin-top: 16px;
+            height: 52px;
+            width: 262px;
+            background: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 35px;
+            text-align: center;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 48px;
+            color: #a981e2;
+            outline: none;
+            border: none;
+
+            .option {
+              font-weight: 600;
+            }
+
+            .spinner-border {
+              font-size: 65px;
+            }
+          }
+
+          .connect-wallet {
+            width: 220px !important;
+          }
+        }
+
+        @include resp($md) {
+          text-align: center;
+          label {
+            margin-top: 4px;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 32px;
+            color: #ffffff;
+            display: block;
+          }
+          .item {
+            margin-top: 16px;
+            height: 48px;
+            width: 225px;
+            background: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 35px;
+            text-align: center;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            color: #a981e2;
+            outline: none;
+            border: none;
+
+            .option {
+              font-weight: 600;
+            }
+
+            .spinner-border {
+              font-size: 65px;
+            }
+          }
+
+          .connect-wallet {
+            width: 260px !important;
+          }
+        }
+
+        @include resp($lg) {
+          text-align: center;
+          margin-right: 36px;
+
+          label {
+            margin-top: 8px;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+          }
+
+          .item {
+            height: 60px;
+            width: 180px;
+            background: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 35px;
+            text-align: center;
+            font-family: Urbane Rounded;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: #a981e2;
+            outline: none;
+            padding: 8px 8px 12px 8px;
+            border: none;
+
+            .option {
+              font-weight: 600;
+            }
+
+            .spinner-border {
+              font-size: 85px;
+            }
+          }
+
+          .connect-wallet {
+            width: 400px !important;
+          }
+
+          .form-select:disabled {
+            background: rgba(180, 180, 180, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  img {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+
+    @include resp(390px) {
+      display: none;
+    }
+    @include resp($lg) {
+      display: block;
+    }
+  }
+}

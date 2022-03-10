@@ -1,0 +1,374 @@
+#roadmap {
+  overflow-x: hidden;
+  @include resp($xxl) {
+    // height: 1450px;
+  }
+  @include maxResp($xl) {
+    height: initial;
+  }
+  background-image: url('../imgs/illustrations/roadmap/bg_desktop.png');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  // .moon-walker-1 {
+  //   position: absolute;
+  //   top: 516px;
+  //   left: 80%;
+  // }
+
+  // .moon-walker-2 {
+  //   position: absolute;
+  //   top: 1096px;
+  //   right: 0;
+  // }
+  // yondoo one
+  .yondoo-one {
+    @include resp($lg) {
+      position: absolute;
+      width: 140px;
+      right: 2%;
+      top: 545px;
+    }
+    @include resp($xl) {
+      width: 160px;
+      right: 4%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  // yondo two
+  .yondoo-two {
+    @include resp($lg) {
+      position: absolute;
+      right: 0px;
+      width: 80px;
+      bottom: 280px;
+    }
+    @include resp($xl) {
+      width: 90px;
+    }
+    @include resp($xxl) {
+      width: 100px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  // yondoo three
+  .yondoo-three {
+    width: 100px;
+    position: absolute;
+    top: 520px;
+    right: 0%;
+    @include resp($sm) {
+      right: 10%;
+    }
+    @include resp($md) {
+      right: 20%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  // right side timeline
+  .right-timeline {
+    position: absolute;
+    right: 0px;
+    width: 10%;
+    @include resp($sm) {
+      right: -10px;
+    }
+    @include resp($md) {
+      right: -4.5%;
+    }
+  }
+
+  // center images
+  .center-img {
+    position: absolute;
+    left: 25px;
+    img {
+      width: 100%;
+    }
+  }
+
+  // large image timeline
+  .lg-img-timeline {
+    @include resp($lg) {
+      width: 80px;
+      position: absolute;
+      top: 155px;
+      right: 70px;
+    }
+    @include resp($xl) {
+      right: 150px;
+      width: 82px;
+    }
+    @include resp($xxl) {
+      right: 210px;
+      width: 87px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .container {
+    @extend %container;
+    @include maxResp($lg) {
+      @include pad-tb(50px, 50px);
+    }
+    @include resp($lg) {
+      @include pad-tb(90px, 90px);
+      width: 85%;
+      position: relative;
+    }
+    .title {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: -3px;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+      @include minmax(400px, 490px) {
+        font-size: 45px;
+        line-height: 55px;
+      }
+      @include minmax(490px, $lg) {
+        font-size: 48px;
+        line-height: 59.5px;
+      }
+      @include resp($lg) {
+        font-size: 72px;
+        line-height: 70px;
+        text-align: right;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @include resp($lg) {
+        display: initial;
+        justify-content: initial;
+        align-items: initial;
+      }
+
+      .steps {
+        @include resp(400px) {
+          margin-top: 25px;
+        }
+        @include resp($lg) {
+          margin-top: 80px;
+          // margin-bottom: 175px;
+          // margin-right: 125px;
+        }
+        .para {
+          padding-top: 16px;
+          padding-bottom: 16px;
+          @include resp($xl) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+          @include resp($xxl) {
+            padding-bottom: 25px;
+            padding-top: 25px;
+          }
+          .subtitle {
+            font-family: Urbane Rounded;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 32px;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            text-align: right;
+            @include resp($lg) {
+              display: flex;
+              justify-content: flex-end;
+            }
+            // inner section
+            h2 {
+              font-style: normal;
+              font-weight: bold;
+              line-height: 67%;
+              text-align: center;
+              font-weight: 600;
+              font-size: 45px;
+              line-height: 32px;
+              @include resp(490px) {
+                font-size: 48px;
+              }
+              @include resp($lg) {
+                margin-right: 10px;
+              }
+            }
+            h3 {
+              display: none;
+              @include resp($lg) {
+                display: block;
+                margin-right: 10px;
+              }
+            }
+            h5 {
+              display: block;
+              line-height: 32px;
+              font-size: 18px;
+              text-align: center;
+              margin-top: 10px;
+              font-weight: 600;
+            }
+
+            h2,
+            h3,
+            h5 {
+              @include resp($lg) {
+                font-family: Urbane Rounded;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 36px;
+                line-height: 89%;
+                text-align: right;
+                letter-spacing: -0.03em;
+                margin-top: 0px;
+                margin-bottom: 0px;
+              }
+            }
+          }
+          .detail {
+            margin-top: 6px;
+            font-family: Urbane Rounded;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            @include resp(490px) {
+              width: 100%;
+              max-width: 480px;
+            }
+            @include resp($lg) {
+              font-size: 18px;
+              line-height: 32px;
+              margin-right: 0;
+              text-align: right;
+            }
+          }
+        }
+      }
+      .img-roadmap {
+        overflow: hidden;
+        @include resp(400px) {
+          top: 70px;
+        }
+        @include resp($lg) {
+          width: 63px !important;
+          margin-top: 40px;
+          margin-left: 40px;
+          position: absolute;
+          right: 225px;
+          top: -85px;
+        }
+        img {
+          width: 50%;
+          transform: translateX(45px);
+          @include resp(400px) {
+            transform: translateX(23px);
+          }
+          @include resp($sm) {
+            transform: translateX(0);
+          }
+          @include resp($lg) {
+            transform: initial;
+            width: 100%;
+          }
+        }
+      }
+      .central-img {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+      }
+
+      // bottom image
+      .bottom-img {
+        position: absolute;
+        left: 235px;
+        bottom: -150px;
+        @include resp($sm) {
+          left: 280px;
+        }
+      }
+    }
+    // text content
+    .text-content {
+      @include resp($lg) {
+        width: 75%;
+      }
+      @include resp($xl) {
+        width: 70%;
+      }
+      @include resp($xxl) {
+        width: 67.5%;
+      }
+    }
+    // coming soon 2
+    .coming-soon-2 {
+      margin-top: 50px;
+      margin-left: 25px;
+      @include resp($lg) {
+        position: relative;
+        width: 475px;
+        margin-left: auto;
+        margin-right: 0px;
+      }
+
+      .subtitle {
+        @include resp($lg) {
+          margin-top: 30px;
+        }
+      }
+      // bottom image
+
+      // bottom text
+      h2 {
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 124%;
+        letter-spacing: -3px;
+        text-transform: capitalize;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: white;
+        @include resp(490px) {
+          font-size: 48px;
+        }
+        @include resp($lg) {
+          text-align: center;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 72px;
+          line-height: 99%;
+        }
+      }
+    }
+  }
+}

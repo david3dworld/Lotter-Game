@@ -1,0 +1,131 @@
+#navbar {
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  font-family: Urbane Rounded;
+  @include resp($xs) {
+    margin-top: 0;
+    font-weight: 600;
+  }
+  @include resp($lg) {
+    margin-top: 31px;
+    font-weight: bold;
+  }
+  // navbar container
+  .container {
+    @include resp($xxl) {
+      max-width: 1400px;
+    }
+  }
+
+  // navbar brand
+  .navbar-brand {
+    font-size: 36px;
+    line-height: 200%;
+    @include resp($xs) {
+      padding-left: 10px;
+    }
+  }
+
+  // navigation button
+  .navbar-toggler {
+    padding: 0px !important;
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+    img {
+      width: 50px;
+      @include resp($xs) {
+        width: 57px;
+        height: 57px;
+      }
+    }
+  }
+  // navbar item
+  .nav-item {
+    // nav link
+    .nav-link {
+      line-height: 200%;
+      @include resp($xs) {
+        padding-left: 16px;
+        font-size: 27px;
+      }
+      @include resp($lg) {
+        font-size: 27px;
+      }
+      @include resp($xl) {
+        font-size: 32.5px;
+      }
+      @include resp($xxl) {
+        font-size: 36px;
+      }
+    }
+
+    .nav-link:hover {
+      color: #fbba41 !important;
+    }
+  }
+  .show {
+    background: url('../imgs/illustrations/hero/bg_mobile.png') repeat center
+      center;
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+  }
+  .collapsing {
+    display: none;
+  }
+  // navbar icon
+  .social-icons {
+    @include resp($xs) {
+      padding-left: 16px;
+    }
+    @include resp($lg) {
+      padding-left: 20px;
+    }
+    @include resp($xl) {
+      padding-left: 35px;
+    }
+    @include resp($xxl) {
+      padding-left: 50px;
+    }
+
+    a {
+      img {
+        width: 50px;
+        height: 50px;
+        @include resp($lg) {
+          width: 30px;
+          height: initial;
+        }
+        @include resp($xxl) {
+          width: 48px;
+        }
+      }
+      &:nth-child(2) {
+        svg {
+          @include resp($xxl) {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  // navbar collapse
+  .collapse {
+    @include resp($lg) {
+      position: relative;
+    }
+    .navbar-nav {
+      @include resp($lg) {
+        position: absolute;
+        right: 0px;
+      }
+    }
+  }
+}

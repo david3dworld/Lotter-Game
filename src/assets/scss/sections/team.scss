@@ -1,0 +1,104 @@
+#team {
+  // height: 1175px;
+  background: #a981e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+  .container {
+    // @extend %container;
+    padding-bottom: 95px;
+
+    @include resp($xl) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .title {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      line-height: 123%;
+      text-align: center;
+      letter-spacing: -3px;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+      width: 100%;
+      max-width: 425px;
+
+      @include resp($xs) {
+        margin-top: 38px;
+        font-size: 48px;
+        max-width: initial;
+        span {
+          display: block;
+          width: 100%;
+        }
+      }
+      @include resp($xl) {
+        font-size: 72px;
+        font-weight: normal;
+      }
+    }
+
+    .team-group {
+      margin-top: 65px;
+      .team-member {
+        padding-bottom: 45px;
+        @include resp($md) {
+          padding-bottom: 55px;
+        }
+        .photo {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 170px;
+            height: 170px;
+            border-radius: 170px;
+          }
+        }
+        .role {
+          margin-top: 18px;
+          font-family: Urbane Rounded;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          color: rgba(35, 31, 32, 0.4);
+        }
+        .name {
+          padding-top: 6px;
+          padding-bottom: 6px;
+          font-family: Urbane Rounded;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 32px;
+          text-align: center;
+          color: #ffffff;
+        }
+        .detail {
+          font-family: Urbane Rounded;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 131%;
+          text-align: center;
+          color: #735a94;
+          width: 100%;
+          max-width: 290px;
+          margin-right: auto;
+          margin-left: auto;
+          @include resp($xl) {
+            font-size: 16px;
+          }
+          @include resp($xxl) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

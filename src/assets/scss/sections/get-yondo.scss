@@ -1,0 +1,130 @@
+#get-yondo {
+  @include resp($xxl) {
+    height: 1220px;
+  }
+  @include minmax(400px, $xxl) {
+    height: initial;
+  }
+  background-color: $paste;
+
+  @include resp(400px) {
+    background: #1692ea url(/img/right.48773f56.png) no-repeat right 355px;
+    background-size: 140px;
+  }
+  @include resp($sm) {
+    background: #1692ea url(/img/right.48773f56.png) no-repeat right 360px;
+    background-size: 150px;
+  }
+  @include resp($lg) {
+    background: #1692ea url(../imgs/illustrations/get-yondo/bg_desktop.png)
+      no-repeat right center;
+    background-size: 45%;
+  }
+  @include resp($xxl) {
+    background: #1692ea url(../imgs/illustrations/get-yondo/bg_desktop.png)
+      no-repeat right -190px;
+  }
+
+  .container {
+    height: 100%;
+    @include resp(400px) {
+      @include pad-tb(24px, 24px);
+      @include pad-lr(24px, 24px);
+    }
+    @include minmax(490px, $lg) {
+      @include pad-tb(50px, 50px);
+    }
+    @extend %container;
+    @include resp($lg) {
+      @include pad-tb(60px, 60px);
+    }
+    .text-area {
+      @include resp($lg) {
+        width: 60%;
+      }
+
+      .title {
+        margin-bottom: 55px;
+        font-family: Urbane Rounded;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 78px;
+        letter-spacing: -3px;
+        text-transform: capitalize;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #ffffff;
+      }
+
+      .para {
+        @include minmax(400px, $lg) {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        @include resp($lg) {
+          padding-top: 25px;
+          padding-bottom: 25px;
+        }
+        .subtitle {
+          margin-bottom: 18px;
+          font-family: Urbane Rounded;
+          font-style: normal;
+          font-weight: normal;
+          @include resp(400px) {
+            font-size: 20px;
+            line-height: 28px;
+          }
+          @include resp(490px) {
+            font-size: 24px;
+            line-height: 32px;
+          }
+          @include resp($lg) {
+            font-size: 36px;
+            line-height: 32px;
+          }
+          letter-spacing: -0.03em;
+          color: #ffffff;
+        }
+
+        .detail {
+          font-family: Urbane Rounded;
+          font-weight: 400;
+          @include resp(400px) {
+            font-size: 16px;
+            line-height: 30px;
+          }
+          @include resp(490px) {
+            font-size: 18px;
+            line-height: 32px;
+          }
+          color: #ffffff;
+        }
+      }
+    }
+    // community
+    .community {
+      .detail {
+        @include resp(400px) {
+          width: 90%;
+        }
+        @include resp(490px) {
+          width: 95%;
+        }
+      }
+    }
+    // public team
+    .public-team {
+      .detail {
+        @include resp(400px) {
+          width: 85%;
+        }
+        @include resp(490px) {
+          width: 90%;
+        }
+        @include resp($md) {
+          width: initial;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+#universe {
+  background-color: $pink;
+  @include maxResp($lg) {
+    height: initial;
+  }
+  @include resp($xxl) {
+    height: 764px;
+  }
+
+  @include resp($xs) {
+    background: $pink url(../imgs/illustrations/universe/mobile_pink_yondo.png)
+      no-repeat 100% 110px;
+    background-size: 140px !important;
+  }
+  @include resp($lg) {
+    background: $pink url(../imgs/illustrations/universe/bg_pink_yondo.png)
+      no-repeat 100% 100%;
+    background-size: cover !important;
+  }
+  @include resp($xl) {
+    background-size: contain !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container {
+    @include resp(400px) {
+      padding-top: 90px;
+
+      @include pad-lr(30px, 30px);
+    }
+    @include resp(480px) {
+      padding-top: 90px;
+      @include pad-lr(30px, 30px);
+    }
+    @include resp($lg) {
+      padding-top: 0px;
+      @include pad-lr(50px, 50px);
+    }
+    @include resp($xl) {
+      @include pad-lr(75px, 75px);
+    }
+    @include resp($xxl) {
+      @include pad-lr(90px, 90px);
+    }
+    .header {
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 72px;
+      width: 350px;
+      @include resp($sm) {
+        width: initial;
+      }
+      @include minmax(400px, $md) {
+        font-size: 65px;
+      }
+      @include resp($lg) {
+        width: 50%;
+      }
+      @include resp($xl) {
+        width: 60%;
+      }
+      line-height: 76px;
+      letter-spacing: -3px;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+      // icons
+      .lg-icon {
+        @include maxResp($lg) {
+          // font-size: 22px;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 64px;
+      @include minmax(400px, $lg) {
+        width: initial;
+      }
+      @include resp($xl) {
+        width: 58%;
+      }
+      font-family: Urbane Rounded;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 32px;
+      color: #ffffff;
+      p {
+        &:nth-child(1) {
+          @include resp($lg) {
+            width: 42%;
+          }
+          @include resp($xl) {
+            width: initial;
+          }
+        }
+        &:nth-child(2) {
+          @include resp($lg) {
+            width: 38%;
+          }
+          @include resp($xl) {
+            width: 85%;
+          }
+        }
+      }
+    }
+
+    .action {
+      margin-top: 38px;
+    }
+  }
+  // bottom images
+  .bottom-img-wrap {
+    margin-top: -35px;
+    @include resp($sm) {
+      margin-top: -50px;
+    }
+  }
+}
